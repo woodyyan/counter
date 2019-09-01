@@ -2,7 +2,8 @@
   <div class="counter">
     <h1>{{ msg }}</h1>
     <p>这是一个counter</p>
-    <button v-on:click="clickPlus">{{click}}</button>
+    <button v-on:click="clickPlus">{{click1}}</button>
+    <button v-on:click="clickMun">{{click2}}</button>
     <br/>
     <p>{{ number }}</p>
   </div>
@@ -17,12 +18,16 @@ export default {
   data(){
     return {
                 number: 0,
-                click: "点我"  
+                click1: "点我+1",
+                click2: "点我-1"
     }
         },
         methods:{
             clickPlus: function (){
                 this.number ++;
+            },
+            clickMun: function (){
+                this.number --;
             }
         }
 }
